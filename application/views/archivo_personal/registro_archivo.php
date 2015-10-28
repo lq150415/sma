@@ -12,13 +12,15 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+		<!--validaciones-->
 		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery_1.4.js"></script>
 		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery_validate.js"></script>
-		<!--
-		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery-ui/external/jquery/jquery.js"></script>-->
-		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery-ui/jquery-ui.js"></script>
 
+		<!--Datepicker-->
+		<link rel="stylesheet" href="<?= base_url('templates/js/date/themes/base/ui.all.css');?>"/>
+		<script type="text/javascript" src="<?= base_url();?>/templates/js/date/ui/ui.datepicker.js"></script>
+		
+		
 		<!--Validacion de campos-->
 		<script type="text/javascript">
 			$(
@@ -71,8 +73,29 @@
 				}
 			);
 		</script>
+		<!--Datepicker-->
+		<script type="text/javascript">
+			$(function() {
+			$('.datepicker').datepicker
+				({
+				monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+				monthNamesShort: [ "Ene", "Feb", "Mar", "Abr", "Mar", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ],
+				dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+				
+				dateFormat:'yy/mm/dd',
+				beforeShowDay: $ .datepicker.noWeekends,
+				changeMonth: true,
+				changeYear: true,
+				firstDay: 1,
+				yearRange: "1900:2025",
+				beforeShow :  function (){     
+		        $ ( ".ui-datepicker" ). css ( 'font-size' ,  12 )  
+		    	} 
 
+			});
 
+			});
+		</script>
 
 	</head>
 <body>
@@ -131,20 +154,21 @@
 	                    </ul>
 	                </li>
 	                <li class="active2">
-	                    <a href="" class="vnav-item2">PERSONAL<span class="vnav-counter2">2</span></a>
+	                    <a href="" class="vnav-item2">DOCUMENTO C.S.I<span class="vnav-counter2">2</span></a>
 	                    <ul class="vnav-subnav2">
-	                        <li><a href="index.html">REGISTRAR NUEVO PERSONAL</a></li>
-	                        <li><a href="index.html">LISTAR PERSONAL EN GENERAL</a></li>
+	                    	<li><a href="index.html">LISTAR ARCHIVOS</a></li>
+	                        <li><a href="index.html">REGISTRAR NUEVO ARCHIVO</a></li>
+	                        <li><a href="index.html">MODIFICAR ARCHIVO</a></li>
 	                    </ul>
 	                </li>
 	                <li class="active2">
 	                    <a href="" class="vnav-item2">CONSULTAS Y REPORTES<span class="vnav-counter2">5</span></a>
 	                    <ul class="vnav-subnav2">
-	                        <li><a href="index.html">FECHA DE REGISTRO</a></li>
-	                        <li><a href="index.html">NOMBRE COMPLETO O CI</a></li>
-	                        <li><a href="index.html">POR PROFESION</a></li>
-	                        <li><a href="index.html">GENERO (M/F)</a></li>
-	                        <li><a href="index.html">POR ESTADO</a></li>
+	                        <li><a href="index.html">POR NOMBRE DE CARPETA</a></li>
+	                        <li><a href="index.html">POR NOMBRE PROYECTO (URBANIZACION)</a></li>
+	                        <li><a href="index.html">POR NOMBRE DE PRODUCTOR</a></li>
+	                        <li><a href="index.html">POR UBICACION</a></li>
+	                        <li><a href="index.html">POR DEPARTAMENTO</a></li>
 	                    </ul>
 	                </li>
 	                <li class="active2">
@@ -166,13 +190,13 @@
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de caja</td>
-							<td width="240px"><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA"></td>
+							<td width="240px"><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA" onkeypress="return validar_numero(event);"></td>
 							<td width="100px" class="lblnombre">Nro. de tomo</td>
 							<td width="240px"><input type="text" name="ntm_arc" class="txtcampo" placeholder="NRO DE TOMO"></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de fojas</td>
-							<td width="240px"><input type="text" name="foj_arc" class="txtcampo" placeholder="NRO DE FOJAS"></td>
+							<td width="240px"><input type="text" name="foj_arc" class="txtcampo" placeholder="NRO DE FOJAS" onkeypress="return validar_numero(event);"></td>
 							<td width="100px" class="lblnombre">Cubierta</td>
 							<td width="240px">
 								<select name="cub_arc" class="txtselect">
@@ -217,7 +241,7 @@
 							<td width="40px" class="lblnombre">Manzano</td>
 							<td width="120px"><input type="text" name="man_dte" class="txtcampo short" placeholder="MANZANO" ></td>		
 							<td width="40px" class="lblnombre">Lote</td>
-							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" ></td>
+							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" onkeypress="return validar_numero(event);" ></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -232,9 +256,9 @@
 						</tr>
 						<tr style="height: 30px;">
 							<td width="130px" class="lblnombre">Fecha Inicial Extrema</td>
-							<td width="220px"><input type="text" name="fec_ini" class="txtcampo" placeholder="FECHA INICIAL" ></td>
+							<td width="220px"><input type="text" name="fec_ini" class="txtcampo datepicker" readonly="" placeholder="FECHA INICIAL" ></td>
 							<td width="100px" class="lblnombre">Fecha Final Extrema</td>
-							<td width="70px"><input type="text" name="fec_fin" class="txtcampo" placeholder="FECHA FINAL" ></td>
+							<td width="70px"><input type="text" name="fec_fin" class="txtcampo datepicker" readonly="" placeholder="FECHA FINAL" ></td>
 						</tr>
 					</table>
 					<!--TIPOS DE DOCUMENTOS-->
@@ -256,7 +280,7 @@
 										<option value="CH">Documento de identificacion</option>
 									</select>
 								<td width="80px" class="lblnombre">Fecha Doc.</td>
-								<td width="70px"><input type="text" name="fec_doc" class="txtcampo" placeholder="FECHA" ></td>
+								<td width="70px"><input type="text" name="fec_doc" class="txtcampo datepicker" readonly="" placeholder="FECHA" ></td>
 							</tr>
 							<tr style="height: 30px;">
 								<td width="100px" class="lblnombre">Cargar Archivo</td>
