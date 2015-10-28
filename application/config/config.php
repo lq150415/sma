@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/archivo-uet/';
+$config['base_url'] = 'http://localhost/saca/';
 
 /*
 |--------------------------------------------------------------------------

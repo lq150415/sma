@@ -69,20 +69,21 @@
 	                    </ul>
 	                </li>
 	                <li class="active2">
-	                    <a href="" class="vnav-item2">PERSONAL<span class="vnav-counter2">2</span></a>
+	                    <a href="" class="vnav-item2">DOCUMENTO C.S.I<span class="vnav-counter2">2</span></a>
 	                    <ul class="vnav-subnav2">
-	                        <li><a href="index.html">REGISTRAR NUEVO PERSONAL</a></li>
-	                        <li><a href="index.html">LISTAR PERSONAL EN GENERAL</a></li>
+	                    	<li><a href="index.html">VER ARCHIVOS</a></li>
+	                        <li><a href="index.html">REGISTRAR NUEVO ARCHIVO</a></li>
+	                        <li><a href="index.html">MODIFICAR ARCHIVO</a></li>
 	                    </ul>
 	                </li>
 	                <li class="active2">
 	                    <a href="" class="vnav-item2">CONSULTAS Y REPORTES<span class="vnav-counter2">5</span></a>
 	                    <ul class="vnav-subnav2">
-	                        <li><a href="index.html">FECHA DE REGISTRO</a></li>
-	                        <li><a href="index.html">NOMBRE COMPLETO O CI</a></li>
-	                        <li><a href="index.html">POR PROFESION</a></li>
-	                        <li><a href="index.html">GENERO (M/F)</a></li>
-	                        <li><a href="index.html">POR ESTADO</a></li>
+	                        <li><a href="index.html">POR NOMBRE DE CARPETA</a></li>
+	                        <li><a href="index.html">POR NOMBRE PROYECTO (URBANIZACION)</a></li>
+	                        <li><a href="index.html">POR NOMBRE DE PRODUCTOR</a></li>
+	                        <li><a href="index.html">POR UBICACION</a></li>
+	                        <li><a href="index.html">POR DEPARTAMENTO</a></li>
 	                    </ul>
 	                </li>
 	                <li class="active2">
@@ -172,7 +173,7 @@
 							<td width="130px" class="lblnombre">Fecha Inicial Extrema</td>
 							<td width="220px"><input type="text" name="ci" class="txtcampo" id="datepicker" placeholder="FECHA INICIAL" ></td>
 							<td width="100px" class="lblnombre">Fecha Final Extrema</td>
-							<td width="70px"><input type="date" name="ci" class="txtcampo" placeholder="FECHA FINAL" ></td>
+							<td width="70px"><input type="text" name="ci" class="txtcampo" placeholder="FECHA FINAL" ></td>
 						</tr>
 					</table>
 					<!--TIPOS DE DOCUMENTOS-->
@@ -198,7 +199,7 @@
 							</tr>
 							<tr style="height: 30px;">
 								<td width="100px" class="lblnombre">Cargar Archivo</td>
-								<td><input type="file" value="CARGAR ARCHIVO" class="txtcampo"></td>
+								<td><input type="file" value="CARGAR ARCHIVO" class="txtcampo" style="border: 0px;"></td>
 								<td width="80px" class="lblnombre">Descripción</td>
 								<td width="70px"><input type="text" name="ci" class="txtcampo " placeholder="DESCRIPCION" ></td>
 							</tr>
