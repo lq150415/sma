@@ -206,6 +206,28 @@
 						</table>
 					</fieldset>
 				</fieldset>
+				<fieldset class="fieldcuerpo" align="left" >
+					<legend> UBICACION FISICA </legend>
+					<table >
+						<tr style="height: 30px;">
+							<td width="100px" class="lblnombre">Ambiente</td>
+							<td width="240px"><input type="number" name="ci" class="txtcampo" placeholder="AMBIENTE" ></td>
+							<td width="100px" class="lblnombre">Estante</td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="ESTANTE" ></td>
+						</tr>
+						<tr style="height: 30px;">
+							<td width="100px" class="lblnombre">Cuerpo</td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="CUERPO" ></td>
+							<td width="100px" class="lblnombre">Balda</td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="BALDA" ></td>
+						</tr>
+					</table>
+				</fieldset>
+
+
+
+
+
 				<fieldset class="fieldcuerpo" align="left">
 					<legend>AREA</legend>
 					<table>
