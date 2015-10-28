@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<!--iconos-->
+	<link rel="stylesheet" href="fonts/style.css">
+
+</head>
+<body>
+<!-- Datepicker -->
+
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+<script>
+
+	$(function () {
+		$(".datepicker").datepicker
+		({
+			monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+			monthNamesShort: [ "Ene", "Feb", "Mar", "Abr", "Mar", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ],
+			dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+			
+			dateFormat:'yy/mm/dd',
+			beforeShowDay: $ .datepicker.noWeekends,
+			changeMonth: true,
+			changeYear: true,
+			firstDay: 1,
+			yearRange: "1900:2025",
+			beforeShow :  function (){     
+	        $ ( ".ui-datepicker" ). css ( 'font-size' ,  12 )  
+	    	} 
+
+		});
+	});
+</script>
+
+<!-- Highlight / Error -->
+<h2 class="demoHeaders">Highlight / Error</h2>
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+		<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+		<strong>Hey!</strong> Sample ui-state-highlight style.</p>
+	</div>
+</div>
+<br>
+<div class="ui-widget">
+	<div class="ui-state-error ui-corner-all" style="padding:10px;">
+		<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+		<strong>Alert:</strong> Sample ui-state-error style.</p>
+	</div>
+</div>
+
+<h1><span class="icon-user"></span></h1>
+  
+<input type="text" class="datepicker" id="1">
+<input type="text" class="datepicker" id="2">
+<input type="text" class="datepicker" id="3">
+<input type="text" class="datepicker" id="4">
+</body>
+</html>
