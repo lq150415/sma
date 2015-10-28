@@ -12,6 +12,7 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<<<<<<< HEAD
 		<!--validaciones-->
 		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery_1.4.js"></script>
 		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery_validate.js"></script>
@@ -97,6 +98,8 @@
 			});
 		</script>
 
+=======
+>>>>>>> 54f318e5bf6d2dd9fc75913c479ce274b3059f26
 	</head>
 <body>
 <div id="daddy">
@@ -184,22 +187,30 @@
 
 		<div id="cB">
 			<div class="titulo">REGISTRAR DATOS DE CARPETA SOCIAL INDIVIDUAL - CSI</div>
-			<form name="frmarchivo" id="frmarchivo" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
 				<fieldset class="fieldcuerpo" align="left" >
 					<legend> DATOS GENERALES </legend>
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de caja</td>
+<<<<<<< HEAD
 							<td width="240px"><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA" onkeypress="return validar_numero(event);"></td>
+=======
+							<td width="240px"><input type="number" name="ci" class="txtcampo" placeholder="NRO DE CAJA" ></td>
+>>>>>>> 54f318e5bf6d2dd9fc75913c479ce274b3059f26
 							<td width="100px" class="lblnombre">Nro. de tomo</td>
-							<td width="240px"><input type="text" name="ntm_arc" class="txtcampo" placeholder="NRO DE TOMO"></td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="NRO DE TOMO" ></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de fojas</td>
+<<<<<<< HEAD
 							<td width="240px"><input type="text" name="foj_arc" class="txtcampo" placeholder="NRO DE FOJAS" onkeypress="return validar_numero(event);"></td>
+=======
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="NRO DE FOJAS" ></td>
+>>>>>>> 54f318e5bf6d2dd9fc75913c479ce274b3059f26
 							<td width="100px" class="lblnombre">Cubierta</td>
 							<td width="240px">
-								<select name="cub_arc" class="txtselect">
+								<select name="cubierta" class="txtselect">
 									<option value="">SELECCIONE</option>
 									<option value="Carpetilla">Carpetilla</option>
 									<option value="Carpeta de palanca">Carpeta de palanca</option>
@@ -214,14 +225,14 @@
 					<table >
 						<tr style="height:3px;">
 							<td width="180px" class="lblnombre">Nombre del proyecto (urb)</td>
-							<td width="480px"><input type="text" name="npr_dte" class="txtcampo large" placeholder="URBANIZACION" ></td>
+							<td width="480px"><input type="text" name="ci" class="txtcampo large" placeholder="URBANIZACION" ></td>
 						</tr>
 					</table>
 					<table>
 						<tr style="height: 30px;">
 							<td width="40px" class="lblnombre">Lugar</td>
 							<td width="100px">
-								<select name="lug_dte" class="txtselect short">
+								<select name="Lugar" class="txtselect short">
 									<option value="">SELECCIONE</option>
 									<option value="LP">La Paz</option>
 									<option value="OR">Oruro</option>
@@ -235,13 +246,17 @@
 								</select>
 							</td>
 							<td width="40px" class="lblnombre">Sector</td>
-							<td width="120px"><input type="text" name="sec_dte" class="txtcampo short" placeholder="SECTOR" ></td>
+							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="SECTOR" ></td>
 							<td width="40px" class="lblnombre">Plan</td>
-							<td width="120px"><input type="text" name="pln_dte" class="txtcampo short" placeholder="PLAN" ></td>
+							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="PLAN" ></td>
 							<td width="40px" class="lblnombre">Manzano</td>
-							<td width="120px"><input type="text" name="man_dte" class="txtcampo short" placeholder="MANZANO" ></td>		
+							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="MANZANO" ></td>		
 							<td width="40px" class="lblnombre">Lote</td>
+<<<<<<< HEAD
 							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" onkeypress="return validar_numero(event);" ></td>
+=======
+							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="LOTE" ></td>
+>>>>>>> 54f318e5bf6d2dd9fc75913c479ce274b3059f26
 						</tr>
 					</table>
 				</fieldset>
@@ -250,15 +265,21 @@
 					<table>
 						<tr style="height: 30px;">
 							<td width="130px" class="lblnombre">Nombre de carpeta</td>
-							<td width="220px"><input type="text" name="nom_car" id="nom_car" class="txtcampo" placeholder="ADJUDICATARIO/BENEFICIARIO" ></td>
+							<td width="220px"><input type="text" name="ci" class="txtcampo" placeholder="ADJUDICATARIO/BENEFICIARIO" ></td>
 							<td width="80px" class="lblnombre">Cantidad de Doc.</td>
-							<td width="70px"><input type="text" name="cant_fol" class="txtcampo" placeholder="CANTIDAD DE DOCUMENTOS" ></td>
+							<td width="70px"><input type="text" name="ci" class="txtcampo" placeholder="CANTIDAD DE DOCUMENTOS" ></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="130px" class="lblnombre">Fecha Inicial Extrema</td>
+<<<<<<< HEAD
 							<td width="220px"><input type="text" name="fec_ini" class="txtcampo datepicker" readonly="" placeholder="FECHA INICIAL" ></td>
 							<td width="100px" class="lblnombre">Fecha Final Extrema</td>
 							<td width="70px"><input type="text" name="fec_fin" class="txtcampo datepicker" readonly="" placeholder="FECHA FINAL" ></td>
+=======
+							<td width="220px"><input type="text" name="ci" class="txtcampo" id="datepicker" placeholder="FECHA INICIAL" ></td>
+							<td width="100px" class="lblnombre">Fecha Final Extrema</td>
+							<td width="70px"><input type="text" name="ci" class="txtcampo" placeholder="FECHA FINAL" ></td>
+>>>>>>> 54f318e5bf6d2dd9fc75913c479ce274b3059f26
 						</tr>
 					</table>
 					<!--TIPOS DE DOCUMENTOS-->
@@ -269,7 +290,7 @@
 								<td rowspan="2" width="100px"></td>
 								<td width="100px" class="lblnombre">Tipo de Doc.</td>
 								<td width="200px">
-									<select name="tip_doc" class="txtselect">
+									<select name="Lugar" class="txtselect">
 										<option value="">SELECCIONE</option>
 										<option value="LP">Resolucion</option>
 										<option value="OR">Memorandum</option>
@@ -280,33 +301,60 @@
 										<option value="CH">Documento de identificacion</option>
 									</select>
 								<td width="80px" class="lblnombre">Fecha Doc.</td>
+<<<<<<< HEAD
 								<td width="70px"><input type="text" name="fec_doc" class="txtcampo datepicker" readonly="" placeholder="FECHA" ></td>
+=======
+								<td width="70px"><input type="text" name="ci" class="txtcampo" id="datepicker" placeholder="FECHA" ></td>
+>>>>>>> 54f318e5bf6d2dd9fc75913c479ce274b3059f26
 							</tr>
 							<tr style="height: 30px;">
 								<td width="100px" class="lblnombre">Cargar Archivo</td>
-								<td><input type="file" value="CARGAR ARCHIVO" class="txtcampo"></td>
+								<td><input type="file" value="CARGAR ARCHIVO" class="txtcampo" style="border: 0px;"></td>
 								<td width="80px" class="lblnombre">Descripción</td>
-								<td width="70px"><input type="text" name="des" class="txtcampo " placeholder="DESCRIPCION" ></td>
+								<td width="70px"><input type="text" name="ci" class="txtcampo " placeholder="DESCRIPCION" ></td>
 							</tr>
 						</table>
 					</fieldset>
 				</fieldset>
+				<fieldset class="fieldcuerpo" align="left" >
+					<legend> UBICACION FISICA </legend>
+					<table >
+						<tr style="height: 30px;">
+							<td width="100px" class="lblnombre">Ambiente</td>
+							<td width="240px"><input type="number" name="ci" class="txtcampo" placeholder="AMBIENTE" ></td>
+							<td width="100px" class="lblnombre">Estante</td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="ESTANTE" ></td>
+						</tr>
+						<tr style="height: 30px;">
+							<td width="100px" class="lblnombre">Cuerpo</td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="CUERPO" ></td>
+							<td width="100px" class="lblnombre">Balda</td>
+							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="BALDA" ></td>
+						</tr>
+					</table>
+				</fieldset>
+
+
+
+
+
 				<fieldset class="fieldcuerpo" align="left">
 					<legend>AREA</legend>
 					<table>
 						<tr style="height: 30px;">
 							<td width="180px" class="lblnombre">Nombre del Productor</td>
-							<td width="220px"><input type="text" name="pro_area" class="txtcampo large" placeholder="NOMBRE DEL PRODUCTOR" ></td>
+							<td width="220px"><input type="text" name="ci" class="txtcampo large" placeholder="NOMBRE DEL PRODUCTOR" ></td>
 						</tr>
 						<tr>
 							<td width="180px" class="lblnombre">Observacion</td>
-							<td width="70px"><input type="text" name="obs_area" class="txtcampo large" placeholder="OBSERVACION" ></td>
+							<td width="70px"><input type="text" name="ci" class="txtcampo large" placeholder="OBSERVACION" ></td>
 						</tr>
 					</table>
 				</fieldset>
 				<center>
 					<table>
-						<tr style="height: 50px;">
+						<tr style="heigh
+						t: 50px;">
 							<td>
 								<input type="submit" class="botones ico-btnsave" value="GUARDAR DATOS">
                  				<input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
