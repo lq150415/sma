@@ -27,7 +27,7 @@
 				<li><a href="">C.S.I.</a></li>
 				<li><a href="">C.P.I.</a></li>
 				<li><a href="">Solicitudes</a></li>
-				<li><a href="">Notificaciones</a></li>
+				<li><a href="">Autorizaciones</a></li>
 				<li><a href="">Devoluciones</a></li>
 			</ul>
 		</div>

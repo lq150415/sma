@@ -139,10 +139,11 @@ h5 {
 	height:35px; 
 	margin:128px 0 0 0;
 	color: #f36;
-	border-radius: 20px 6px 6px 20px;
-	-moz-border-radius: 20px 6px 6px 20px;
-	-ms-border-radius: 20px 6px 6px 20px;
-	-webkit-border-radius: 20px 6px 6px 20px;
+	border-top: 5px solid #212020;
+	border-radius: 20px 10px 6px 20px;
+	-moz-border-radius: 20px 10px 6px 20px;
+	-ms-border-radius: 20px 10px 6px 20px;
+	-webkit-border-radius: 20px 10px 6px 20px;
 	float:left;
 	background: rgba(254,182,69,1);
 	background: -moz-linear-gradient(left, rgba(254,182,69,1) 0%, rgba(241,231,103,1) 54%, rgba(241,231,103,1) 100%);
@@ -225,6 +226,8 @@ h5 {
 	list-style:none; 
 	margin:0 10px 0 0; 
 	font:bold 13px verdana,serif;
+	border-top: 1px solid #161515;
+	border-bottom: 1px solid #161515;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	-ms-border-radius: 6px;
@@ -240,7 +243,10 @@ h5 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feb645', endColorstr='#f1e767', GradientType=1 );
 }
 #menu ul li a:link, #menu ul li a:visited {
-	padding:5px 7px; 
+	padding-top:2px;
+	padding-bottom:3px;
+	padding-left:4px;
+	padding-right:4px;
 	color:#000; 
 	border:1px solid #ead28b; 
 	background:#fff;
@@ -277,8 +283,8 @@ h5 {
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 }
-#cA {float:left; width:265px;display:inline;border-right: 5px solid #3B3939;}
-#cB {float:right; width:710px;display:inline;border: 1px solid #110909;padding: 2px;}
+#cA {float:left; width:265px;height: 100%; display:inline;border-right: 4px solid #3B3939;}
+#cB {float:right; width:710px;display:inline;}
 #cB1 {width:340px; float:left; }
 .news {border-bottom:1px solid #e6e1dd; border-top:1px solid #fcfafb; padding:10px 15px 5px 15px}
 #cB2 {width:309px; float:right; margin:0}
