@@ -71,7 +71,7 @@
 	                <li class="active2">
 	                    <a href="" class="vnav-item2">DOCUMENTO C.S.I<span class="vnav-counter2">2</span></a>
 	                    <ul class="vnav-subnav2">
-	                    	<li><a href="index.html">VER ARCHIVOS</a></li>
+	                    	<li><a href="index.html">LISTAR ARCHIVOS</a></li>
 	                        <li><a href="index.html">REGISTRAR NUEVO ARCHIVO</a></li>
 	                        <li><a href="index.html">MODIFICAR ARCHIVO</a></li>
 	                    </ul>
