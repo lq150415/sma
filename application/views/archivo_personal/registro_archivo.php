@@ -223,11 +223,6 @@
 						</tr>
 					</table>
 				</fieldset>
-
-
-
-
-
 				<fieldset class="fieldcuerpo" align="left">
 					<legend>AREA</legend>
 					<table>
@@ -243,15 +238,18 @@
 				</fieldset>
 				<center>
 					<table>
-						<tr style="heigh
-						t: 50px;">
+						<tr style="height: 50px;">
 							<td>
 								<input type="submit" class="botones ico-btnsave" value="GUARDAR DATOS">
                  				<input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
                  			</td>
 						</tr>
 					</table>
-				</center>
+				</td>
+				</tr>
+				</table>
+				</center>	
+				</fieldset>
 			</form>
 		</div><!-- cB -->
 		<div class="Cpad">

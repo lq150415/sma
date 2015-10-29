@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Registro extends CI_Controller 
+class Login extends CI_Controller 
 {
 	public function __construct()
 	{
@@ -8,7 +8,6 @@ class Registro extends CI_Controller
     }
 	public function index()
 	{
-		$this->load->view('archivo_personal/registro_archivo');
+		$this->load->view('archivo_personal/personal_login');
 	}
-	
 }
