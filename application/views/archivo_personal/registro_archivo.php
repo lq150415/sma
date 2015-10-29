@@ -308,20 +308,6 @@
 						</tr>
 					</table>
 				</fieldset>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 33de1248b674b19aa48a3764ee8636263c012b4d
->>>>>>> 303917f5d0036c50745c6920df211844cb475c4a
-=======
->>>>>>> 78b0e450435b4b4a5688ea708fb6f73e0ad3dc1f
 				<fieldset class="fieldcuerpo" align="left">
 					<legend>AREA</legend>
 					<table>
