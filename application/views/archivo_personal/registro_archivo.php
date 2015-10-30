@@ -55,24 +55,24 @@
 							},
 							messages: 
 							{
-							'ncj_arc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'cub_arc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'npr_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'lug_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'man_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'lot_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'nom_car':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'cant_fol':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'fec_ini':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'fec_fin':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'tip_doc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'fec_doc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'amb_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'est_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'crp_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'bal_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'pro_area':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
-							'obs_area':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'ncj_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'cub_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'npr_dte':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'lug_dte':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'man_dte':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'lot_dte':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'nom_car':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'cant_fol':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'fec_ini':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'fec_fin':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'tip_doc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'fec_doc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'amb_ubi':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'est_ubi':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'crp_ubi':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'bal_ubi':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'pro_area':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'obs_area':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
 							},
 							debug: true,
 							submitHandler: function(form)
@@ -200,9 +200,9 @@
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de caja</td>
-							<td width="240px"><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA" onkeypress="return solonumeros(event);" onpaste="return false"></td>
+							<td width="240px" ><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 							<td width="100px" class="lblnombre">Nro. de tomo</td>
-							<td width="240px"><input type="text" name="ntm_arc" class="txtcampo" placeholder="NRO DE TOMO" onkeypress="return solonumeros(event);" onpaste="return false"></td>
+							<td width="240px" ><input type="text" name="ntm_arc" class="txtcampo" placeholder="NRO DE TOMO" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de fojas</td>
@@ -306,7 +306,7 @@
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Ambiente</td>
-							<td width="240px"><input type="number" min="1" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" ></td>
+							<td width="240px"><input type="text" min="1" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" ></td>
 							<td width="100px" class="lblnombre">Estante</td>
 							<td width="240px"><input type="text" name="est_ubi" class="txtcampo" placeholder="ESTANTE" ></td>
 						</tr>
