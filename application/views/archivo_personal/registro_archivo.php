@@ -312,9 +312,9 @@
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Cuerpo</td>
-							<td width="240px"><input type="text" name="crp_ubi" class="txtcampo" placeholder="CUERPO" ></td>
+							<td width="240px"><input type="text" name="crp_ubi" class="txtcampo" placeholder="CUERPO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 							<td width="100px" class="lblnombre">Balda</td>
-							<td width="240px"><input type="text" name="bal_ubi" class="txtcampo" placeholder="BALDA" ></td>
+							<td width="240px"><input type="text" name="bal_ubi" class="txtcampo" placeholder="BALDA" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -323,11 +323,11 @@
 					<table>
 						<tr style="height: 30px;">
 							<td width="180px" class="lblnombre">Nombre del Productor</td>
-							<td width="220px"><input type="text" name="pro_area" class="txtcampo large" placeholder="NOMBRE DEL PRODUCTOR" ></td>
+							<td width="220px"><input type="text" name="pro_area" class="txtcampo large" placeholder="NOMBRE DEL PRODUCTOR" onkeypress="return sololetras(event);" onpaste="return false"></td>
 						</tr>
 						<tr>
 							<td width="180px" class="lblnombre">Observacion</td>
-							<td width="70px"><input type="text" name="obs_area" class="txtcampo large" placeholder="OBSERVACION" ></td>
+							<td width="70px"><input type="text" name="obs_area" class="txtcampo large" placeholder="OBSERVACION" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 						</tr>
 					</table>
 				</fieldset>

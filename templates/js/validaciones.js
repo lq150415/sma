@@ -4,7 +4,7 @@
 					key=e.keycode || e.which;
 					teclado =String.fromCharCode(key);
 					numero="0123456789";
-					especiales="8-37-38-46";
+					especiales="8-9-37-38-46";
 					teclado_especial=false;
 
 					for(var i in especiales){
@@ -25,8 +25,8 @@
 				function sololetras(e){
 					key=e.keycode || e.which;
 					teclado =String.fromCharCode(key).toUpperCase();
-					letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-					especiales="8-37-38-46-164";
+					letras=" ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+					especiales="8-9-32-37-38-46-164";
 					teclado_especial=false;
 
 					for(var i in especiales){
@@ -47,8 +47,8 @@
 				function alfanumerico(e){
 					key=e.keycode || e.which;
 					teclado =String.fromCharCode(key).toUpperCase();
-					letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789-";
-					especiales="8-37-38-46-164-191";
+					letras=" ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789-";
+					especiales="8-9-32-37-38-46-164-191";
 					teclado_especial=false;
 
 					for(var i in especiales){
