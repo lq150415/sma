@@ -101,7 +101,7 @@
 .txtselect:focus{
   border: 1px solid #EB990A;
 }
-.mensajevalidcaion{
+.mensajevalidacion{
   color: red;
   font-size: 9px
 }
