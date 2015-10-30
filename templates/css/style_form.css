@@ -16,6 +16,7 @@
   background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
   background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
   color: #2E3133;
+  text-transform: uppercase;
 }
 .txtcampo.large{
   width: 450px;
