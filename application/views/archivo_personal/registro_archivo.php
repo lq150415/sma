@@ -336,7 +336,7 @@
 						<tr style="height: 50px;">
 							<td>
 								<input type="submit" class="botones ico-btnsave" value="GUARDAR DATOS">
-                 				<input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
+                 				<input type="reset"  onclick="document.location.reload();" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
                  			</td>
 						</tr>
 					</table>
