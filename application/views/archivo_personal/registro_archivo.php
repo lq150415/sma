@@ -15,6 +15,8 @@
 		<!--validaciones-->
 		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery_1.4.js"></script>
 		<script type="text/javascript" src="<?= base_url();?>/templates/js/jquery_validate.js"></script>
+		<script type="text/javascript" src="<?= base_url();?>/templates/js/validaciones.js"></script>
+
 
 		<!--Datepicker-->
 		<link rel="stylesheet" href="<?= base_url('templates/js/date/themes/base/ui.all.css');?>"/>
@@ -41,27 +43,36 @@
 							'cant_fol': {required: true},
 							'fec_ini': {required: true},
 							'fec_fin': {required: true},
-							'tip_doc': 'required',
+							'tip_doc': {required: true},
 							'fec_doc': {required: true},
-							'pro_area': {required: true}
-
+							'amb_ubi': {required: true},
+							'est_ubi': {required: true},
+							'crp_ubi': 'required',
+							'bal_ubi': {required: true},
+							'pro_area': {required: true},
+							'obs_area': {required: true}
 
 							},
 							messages: 
 							{
-							'ncj_arc':{required:'<label class="mensajevalidcaion">Ingrese el numero de caja</label>'},
-							'cub_arc':{required:'<label class="mensajevalidcaion">Seleccione tipo de cubierata</label>'},
-							'npr_dte':{required:'<label class="mensajevalidcaion">Ingrese nombre de proyecto</label>'},
-							'lug_dte':{required:'<label class="mensajevalidcaion">Seleccione</label>'},
-							'man_dte':{required:'<label class="mensajevalidcaion">Ingrese manzano</label>'},
-							'lot_dte':{required:'<label class="mensajevalidcaion">Ingrese numero de lote</label>'},
-							'nom_car':{required:'<label class="mensajevalidcaion">Ingrese nombre de la carpeta</label>'},
-							'cant_fol':{required:'<label class="mensajevalidcaion">Ingrese el numero de documentos</label>'},
-							'fec_ini':{required:'<label class="mensajevalidcaion">Ingrese fecha</label>'},
-							'fec_fin':{required:'<label class="mensajevalidcaion">Ingrese fecha</label>'},
-							'tip_doc':{required:'<label class="mensajevalidcaion">Seleccione</label>'},
-							'fec_doc':{required:'<label class="mensajevalidcaion">Ingrese fecha</label>'},
-							'pro_area':{required:'<label class="mensajevalidcaion">Ingrese nombre de productor</label>'},
+							'ncj_arc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'cub_arc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'npr_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'lug_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'man_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'lot_dte':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'nom_car':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'cant_fol':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'fec_ini':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'fec_fin':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'tip_doc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'fec_doc':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'amb_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'est_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'crp_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'bal_ubi':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'pro_area':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
+							'obs_area':{required:'<label class="mensajevalidcaion">Campo requerido</label>'},
 							},
 							debug: true,
 							submitHandler: function(form)
@@ -183,22 +194,22 @@
 
 		<div id="cB">
 			<div class="titulo">REGISTRAR DATOS DE CARPETA SOCIAL INDIVIDUAL - CSI</div>
-			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
-				<fieldset class="fieldcuerpo" align="left" >
+			<form name="frmarchivo" id="frmarchivo" action="<?=base_url();?>personal/insertar" method="post">
+				<fieldset class="fieldcuerpo" align="left">
 					<legend> DATOS GENERALES </legend>
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de caja</td>
-							<td width="240px"><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA" onkeypress="return validar_numero(event);"></td>
+							<td width="240px"><input type="text" name="ncj_arc" class="txtcampo" placeholder="NRO DE CAJA" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 							<td width="100px" class="lblnombre">Nro. de tomo</td>
-							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="NRO DE TOMO" ></td>
+							<td width="240px"><input type="text" name="ntm_arc" class="txtcampo" placeholder="NRO DE TOMO" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Nro. de fojas</td>
-							<td width="240px"><input type="text" name="foj_arc" class="txtcampo" placeholder="NRO DE FOJAS" onkeypress="return validar_numero(event);"></td>
+							<td width="240px"><input type="text" name="foj_arc" class="txtcampo" placeholder="NRO DE FOJAS" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 							<td width="100px" class="lblnombre">Cubierta</td>
 							<td width="240px">
-								<select name="cubierta" class="txtselect">
+								<select name="cub_arc" class="txtselect">
 									<option value="">SELECCIONE</option>
 									<option value="Carpetilla">Carpetilla</option>
 									<option value="Carpeta de palanca">Carpeta de palanca</option>
@@ -213,14 +224,14 @@
 					<table >
 						<tr style="height:3px;">
 							<td width="180px" class="lblnombre">Nombre del proyecto (urb)</td>
-							<td width="480px"><input type="text" name="ci" class="txtcampo large" placeholder="URBANIZACION" ></td>
+							<td width="480px"><input type="text" name="npr_dte" class="txtcampo large" placeholder="URBANIZACION" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 						</tr>
 					</table>
 					<table>
 						<tr style="height: 30px;">
 							<td width="40px" class="lblnombre">Lugar</td>
 							<td width="100px">
-								<select name="Lugar" class="txtselect short">
+								<select name="lug_dte" class="txtselect short">
 									<option value="">SELECCIONE</option>
 									<option value="LP">La Paz</option>
 									<option value="OR">Oruro</option>
@@ -234,14 +245,13 @@
 								</select>
 							</td>
 							<td width="40px" class="lblnombre">Sector</td>
-							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="SECTOR" ></td>
+							<td width="120px"><input type="text" name="sec_dte" class="txtcampo short" placeholder="SECTOR" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 							<td width="40px" class="lblnombre">Plan</td>
-							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="PLAN" ></td>
+							<td width="120px"><input type="text" name="pln_dte" class="txtcampo short" placeholder="PLAN" onkeypress="return alfanumerico(event);" onpaste="return false" ></td>
 							<td width="40px" class="lblnombre">Manzano</td>
-							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="MANZANO" ></td>		
+							<td width="120px"><input type="text" name="man_dte" class="txtcampo short" placeholder="MANZANO" ></td>		
 							<td width="40px" class="lblnombre">Lote</td>
-							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" onkeypress="return validar_numero(event);" ></td>
-							<td width="120px"><input type="text" name="ci" class="txtcampo short" placeholder="LOTE" ></td>
+							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" onkeypress="return solonumeros(event);" onpaste="return false" ></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -250,9 +260,9 @@
 					<table>
 						<tr style="height: 30px;">
 							<td width="130px" class="lblnombre">Nombre de carpeta</td>
-							<td width="220px"><input type="text" name="ci" class="txtcampo" placeholder="ADJUDICATARIO/BENEFICIARIO" ></td>
+							<td width="220px"><input type="text" name="nom_car" class="txtcampo" placeholder="ADJUDICATARIO/BENEFICIARIO" onkeypress="return sololetras(event);" onpaste="return false" ></td>
 							<td width="80px" class="lblnombre">Cantidad de Doc.</td>
-							<td width="70px"><input type="text" name="ci" class="txtcampo" placeholder="CANTIDAD DE DOCUMENTOS" ></td>
+							<td width="70px"><input type="text" name="cant_fol" class="txtcampo" placeholder="CANTIDAD DE DOCUMENTOS" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="130px" class="lblnombre">Fecha Inicial Extrema</td>
@@ -269,7 +279,7 @@
 								<td rowspan="2" width="100px"></td>
 								<td width="100px" class="lblnombre">Tipo de Doc.</td>
 								<td width="200px">
-									<select name="Lugar" class="txtselect">
+									<select name="tip_doc" class="txtselect">
 										<option value="">SELECCIONE</option>
 										<option value="LP">Resolucion</option>
 										<option value="OR">Memorandum</option>
@@ -286,7 +296,7 @@
 								<td width="100px" class="lblnombre">Cargar Archivo</td>
 								<td><input type="file" value="CARGAR ARCHIVO" class="txtcampo" style="border: 0px;"></td>
 								<td width="80px" class="lblnombre">Descripción</td>
-								<td width="70px"><input type="text" name="ci" class="txtcampo " placeholder="DESCRIPCION" ></td>
+								<td width="70px"><input type="text" name="des_doc" class="txtcampo " placeholder="DESCRIPCION" onkeypress="return alfanumerico(event);" onpaste="return false" ></td>
 							</tr>
 						</table>
 					</fieldset>
@@ -296,15 +306,15 @@
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Ambiente</td>
-							<td width="240px"><input type="number" name="ci" class="txtcampo" placeholder="AMBIENTE" ></td>
+							<td width="240px"><input type="number" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" ></td>
 							<td width="100px" class="lblnombre">Estante</td>
-							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="ESTANTE" ></td>
+							<td width="240px"><input type="text" name="est_ubi" class="txtcampo" placeholder="ESTANTE" ></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Cuerpo</td>
-							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="CUERPO" ></td>
+							<td width="240px"><input type="text" name="crp_ubi" class="txtcampo" placeholder="CUERPO" ></td>
 							<td width="100px" class="lblnombre">Balda</td>
-							<td width="240px"><input type="text" name="ci" class="txtcampo" placeholder="BALDA" ></td>
+							<td width="240px"><input type="text" name="bal_ubi" class="txtcampo" placeholder="BALDA" ></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -313,11 +323,11 @@
 					<table>
 						<tr style="height: 30px;">
 							<td width="180px" class="lblnombre">Nombre del Productor</td>
-							<td width="220px"><input type="text" name="ci" class="txtcampo large" placeholder="NOMBRE DEL PRODUCTOR" ></td>
+							<td width="220px"><input type="text" name="pro_area" class="txtcampo large" placeholder="NOMBRE DEL PRODUCTOR" ></td>
 						</tr>
 						<tr>
 							<td width="180px" class="lblnombre">Observacion</td>
-							<td width="70px"><input type="text" name="ci" class="txtcampo large" placeholder="OBSERVACION" ></td>
+							<td width="70px"><input type="text" name="obs_area" class="txtcampo large" placeholder="OBSERVACION" ></td>
 						</tr>
 					</table>
 				</fieldset>
