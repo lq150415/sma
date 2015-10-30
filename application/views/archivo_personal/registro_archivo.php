@@ -306,7 +306,7 @@
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Ambiente</td>
-							<td width="240px"><input type="number" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" ></td>
+							<td width="240px"><input type="number" min="1" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" ></td>
 							<td width="100px" class="lblnombre">Estante</td>
 							<td width="240px"><input type="text" name="est_ubi" class="txtcampo" placeholder="ESTANTE" ></td>
 						</tr>

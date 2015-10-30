@@ -24,8 +24,8 @@
 
 				function sololetras(e){
 					key=e.keycode || e.which;
-					teclado =String.fromCharCode(key);
-					letras="abcdefghijklmnñopqrstuvwxyz";
+					teclado =String.fromCharCode(key).toUpperCase();
+					letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 					especiales="8-37-38-46-164";
 					teclado_especial=false;
 
