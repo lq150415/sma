@@ -249,9 +249,9 @@
 							<td width="40px" class="lblnombre">Plan</td>
 							<td width="120px"><input type="text" name="pln_dte" class="txtcampo short" placeholder="PLAN" onkeypress="return alfanumerico(event);" onpaste="return false" ></td>
 							<td width="40px" class="lblnombre">Manzano</td>
-							<td width="120px"><input type="text" name="man_dte" class="txtcampo short" placeholder="MANZANO" ></td>		
+							<td width="120px"><input type="text" name="man_dte" class="txtcampo short" placeholder="MANZANO" onkeypress="return alfanumerico(event);" onpaste="return false" ></td>		
 							<td width="40px" class="lblnombre">Lote</td>
-							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" onkeypress="return solonumeros(event);" onpaste="return false" ></td>
+							<td width="120px"><input type="text" name="lot_dte" class="txtcampo short" placeholder="LOTE" onkeypress="return alfanumerico(event);" onpaste="return false" ></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -306,9 +306,9 @@
 					<table >
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Ambiente</td>
-							<td width="240px"><input type="text" min="1" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" ></td>
+							<td width="240px"><input type="text" min="1" name="amb_ubi" class="txtcampo" placeholder="AMBIENTE" onkeypress="return alfanumerico(event);" onpaste="return false" ></td>
 							<td width="100px" class="lblnombre">Estante</td>
-							<td width="240px"><input type="text" name="est_ubi" class="txtcampo" placeholder="ESTANTE" ></td>
+							<td width="240px"><input type="text" name="est_ubi" class="txtcampo" placeholder="ESTANTE" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Cuerpo</td>
