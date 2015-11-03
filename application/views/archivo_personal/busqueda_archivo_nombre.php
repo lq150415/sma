@@ -12,10 +12,6 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<!-- validaciones -->
-        <script type="text/javascript" src="<?= base_url('templates/js/jquery_1.4.js');?>"/></script>
-        <script type="text/javascript" src="<?= base_url('templates/js/jquery_validate.js');?>"/></script>
-        <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>
 	</head>
 <body>
 <div id="daddy">
@@ -102,47 +98,40 @@
 		</div><!-- cA -->
 
 		<div id="cB">
-			<div class="titulo">INICIAR SESIÓN </div>
+			<div class="titulo">CONSULTA DE ARCHIVO POR NOMBRE </div>
 			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
-				<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
-					<table>
-					<tr>
-						<td>
-						<table style="padding-top: 100px;">
-					    <tr>
-                            <td style="border-top: 40px;"><img src="<?= base_url('templates/img/images/team.png');?>" title="Login"></td>
-                        </tr>
-                    </table>
-                    </td>
-                    <td>
-                    <table>
-						<tr style="height: 50px;">
-							<td width="100px" class="lblnombre">CI</td>
-							<td width="100px"><input type="text" name="ci" class="txtcampo" placeholder="CI DE USUARIO" ></td>	
-						</tr>
-						<tr>
-							<td width="100px" class="lblnombre">Password</td>
-							<td width="100px"><input type="password" name="password" class="txtcampo"  placeholder="PASSWORD" ></td>
-						</tr>
-					</table>
-					</td>
-					</tr>
-					</table>
-					<center>
-					<table>
-						<tr style="height: 230px;">
-							<td>
-								<input type="submit" class="botones ico-btnsave" value="INGRESAR">
-                 				<input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
-                 			</td>
-						</tr>
-					</table>
-				        </td>
-				        </tr>
-				</table>
-				</center>
-				</fieldset>
+				<center>
+            <div class="colordiv">
+                <center>
+	        <table>
+	        <tr>
+	            <td rowspan="5">
+	            <img src="<?= base_url('templates/img/images/busquedafolder.png');?>">
+	            </td>
+	        </tr>
+	        <tr>
+	        <td></td>
+	        <td></td>
+	        </tr>
+	        <tr>
+	        <tr style="height: 50px;">
+			   <td width="100px" class="lblnombre">Ingrese nombre:</td>
+			   <td width="100px"><input type="text" name="archivo" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" ></td>	
+		    </tr>  
+	        </tr>
+	        <tr>
+	           <td height="40px" colspan="2" style="padding-left:25px" align="center">
+				<input type="submit" class="botones ico-btnsearch" value="BUSCAR">
+                <input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
+               </td>
+           </tr>
+	<tr><td></td><td></td></tr>
+	</table>
+</form>
+</center>
+</div>
+</center>
 			</form>
 		</div><!-- cB -->
 		<div class="Cpad">
