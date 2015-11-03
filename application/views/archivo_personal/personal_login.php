@@ -16,6 +16,35 @@
         <script type="text/javascript" src="<?= base_url('templates/js/jquery_1.4.js');?>"/></script>
         <script type="text/javascript" src="<?= base_url('templates/js/jquery_validate.js');?>"/></script>
         <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>
+        		
+		<!--Validacion de campos-->
+		<script type="text/javascript">
+			$(
+			   function()
+			   {
+					$('#frmlogin').validate
+					(
+					 	{
+							rules:
+							{
+							'nom_usu': {required: true},
+							'pas_usu': {required: true}
+							},
+							messages: 
+							{
+							'nom_usu':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'pas_usu':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							},
+							debug: true,
+							submitHandler: function(form)
+							{
+								document.getElementById("frmlogin").submit();
+							}
+					 	}
+					);
+				}
+			);
+		</script>
 	</head>
 <body>
 <div id="daddy">
@@ -103,7 +132,7 @@
 
 		<div id="cB">
 			<div class="titulo">INICIAR SESIÓN </div>
-			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmlogin" id="frmlogin" action="<?=base_url();?>personal/insertar" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
 				<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
 					<table>
@@ -111,37 +140,32 @@
 						<td>
 						<table style="padding-top: 100px;">
 					    <tr>
-                            <td style="border-top: 40px;"><img src="<?= base_url('templates/img/images/team.png');?>" title="Login"></td>
+                            <td><img src="<?= base_url('templates/img/images/team.png');?>" title="Login"></td>
                         </tr>
                     </table>
                     </td>
                     <td>
-                    <table>
+                    <table style="padding-top:80px;">
 						<tr style="height: 50px;">
-							<td width="100px" class="lblnombre">CI</td>
-							<td width="100px"><input type="text" name="ci" class="txtcampo" placeholder="CI DE USUARIO" ></td>	
+							<td width="100px" class="lblnombre">Nombre</td>
+							<td width="100px"><input type="text" name="nom_usu" class="txtcampo" placeholder="CI DE USUARIO"></td>	
 						</tr>
 						<tr>
 							<td width="100px" class="lblnombre">Password</td>
-							<td width="100px"><input type="password" name="password" class="txtcampo"  placeholder="PASSWORD" ></td>
+							<td width="100px"><input type="password" name="pas_usu" class="txtcampo"  placeholder="PASSWORD"></td>
+				    	</tr>   
+						<tr style="height: 80px; padding-left:50px;">
+								<td><input type="submit" class="botones ico-btnsave" value="INGRESAR"></td>
+                 				<td><input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS"></td>
+						</tr>
+				        </td>
+				        </tr>
+				    </table>
 						</tr>
 					</table>
 					</td>
 					</tr>
 					</table>
-					<center>
-					<table>
-						<tr style="height: 230px;">
-							<td>
-								<input type="submit" class="botones ico-btnsave" value="INGRESAR">
-                 				<input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
-                 			</td>
-						</tr>
-					</table>
-				        </td>
-				        </tr>
-				</table>
-				</center>
 				</fieldset>
 			</form>
 		</div><!-- cB -->

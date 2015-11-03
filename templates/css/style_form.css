@@ -102,6 +102,8 @@
   border: 1px solid #EB990A;
 }
 .mensajevalidacion{
-  color: red;
-  font-size: 9px
+  
+  --webkit color: red;
+  font-size: 9px;
+
 }
