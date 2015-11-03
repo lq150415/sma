@@ -13,32 +13,6 @@
  *   http://www.gnu.org/licenses/gpl.html
  */
 
- function validar_texto(e) 
-{
-	tecla = (document.all) ? e.keyCode : e.which;
-	if (tecla==8) return true; 
-	patron =/[a-zA-ZÑ-ñ\s]/; 
-	tecla_final = String.fromCharCode(tecla);
-	return patron.test(tecla_final); 
-} 
-function validar_numero(e) 
-{
-	tecla = (document.all) ? e.keyCode : e.which;
-	if (tecla==8) return true; 
-	patron =/[0123456789]/; 
-	tecla_final = String.fromCharCode(tecla);
-	return patron.test(tecla_final); 
-} 
-function validar_ci(e)
-{
-	tecla = (document.all) ? e.keyCode : e.which;
-	if (tecla==8) return true;
-	patron =/[0123456789a-z\-]/;
-	tecla_final = String.fromCharCode(tecla);
-	return patron.test(tecla_final); 
-}
-
-
 (function($) {
 
 $.extend($.fn, {
@@ -286,7 +260,7 @@ $.extend($.validator, {
 		url: "Please enter a valid URL.",
 		date: "Please enter a valid date.",
 		dateISO: "Please enter a valid date (ISO).",
-		number: "Porfabor ingrese solo numeros.",
+		number: "Please enter a valid number.",
 		digits: "Please enter only digits.",
 		creditcard: "Please enter a valid credit card number.",
 		equalTo: "Please enter the same value again.",
