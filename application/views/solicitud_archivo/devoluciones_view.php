@@ -98,7 +98,7 @@
 		</div>
 		<!-- ticker -->
 		<div id="ticker">
-			<b>Unidad Ejecutora de Titulación</b> del Ministerio de Obas Públicas, Servicios y Vivienda.
+			<b>Unidad Ejecutora de Titulación</b> del Ministerio de Obras Públicas, Servicios y Vivienda.
 		</div>
 		<div class="clear"></div>
 		<!-- headerimage -->

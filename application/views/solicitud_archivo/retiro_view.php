@@ -183,7 +183,7 @@
 						<tr>
 							<td width="100px" class="lblnombre">Observaciones</td>
 							<td width="500px">
-								<textarea name="obs_ret" rows="600" cols="300px" class="txtcampo large" onkeypress="return alfanumerico(event);" onpaste="return false"></textarea> 
+								<textarea name="obs_ret" rows="600" cols="300px" class="txtcampo large2" onkeypress="return alfanumerico(event);" onpaste="return false"></textarea> 
 							</td>
 						</tr>
 					</table>
