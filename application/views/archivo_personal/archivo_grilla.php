@@ -12,39 +12,6 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<!-- validaciones -->
-        <script type="text/javascript" src="<?= base_url('templates/js/jquery_1.4.js');?>"/></script>
-        <script type="text/javascript" src="<?= base_url('templates/js/jquery_validate.js');?>"/></script>
-        <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>
-        		
-		<!--Validacion de campos-->
-		<script type="text/javascript">
-			$(
-			   function()
-			   {
-					$('#frmlogin').validate
-					(
-					 	{
-							rules:
-							{
-							'nom_usu': {required: true},
-							'pas_usu': {required: true}
-							},
-							messages: 
-							{
-							'nom_usu':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
-							'pas_usu':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
-							},
-							debug: true,
-							submitHandler: function(form)
-							{
-								document.getElementById("frmlogin").submit();
-							}
-					 	}
-					);
-				}
-			);
-		</script>
 	</head>
 <body>
 <div id="daddy">
@@ -131,43 +98,181 @@
 		</div><!-- cA -->
 
 		<div id="cB">
-			<div class="titulo">INICIAR SESIÓN </div>
-			<form name="frmlogin" id="frmlogin" action="<?=base_url();?>personal/insertar" method="post">
-				<!--TIPOS DE DOCUMENTOS-->
-				<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
-					<table>
-					<tr>
-						<td>
-						<table style="padding-top: 140px;">
-					    <tr>
-                            <td><img src="<?= base_url('templates/img/images/team.png');?>" title="Login"></td>
-                        </tr>
-                    </table>
-                    </td>
-                    <td>
-                    <table style="padding-top:140px;">
-						<tr style="height: 50px;">
-							<td width="100px" class="lblnombre">Nombre</td>
-							<td width="100px"><input type="text" name="nom_usu" class="txtcampo" placeholder="NOMBRE DE USUARIO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
-						</tr>
-						<tr>
-							<td width="100px" class="lblnombre">Password</td>
-							<td width="100px"><input type="password" name="pas_usu" class="txtcampo"  placeholder="PASSWORD" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
-				    	</tr>   
-						<tr style="height: 80px; padding-left:50px;" align="center">
-							<td><input type="submit" class="botones ico-btnsave" value="INGRESAR"></td>
-                 			<td><input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS"></td>
-						</tr>
-				        </td>
-				        </tr>
-				    </table>
-						</tr>
-					</table>
-					</td>
-					</tr>
-					</table>
-				</fieldset>
-			</form>
+			<div class="titulo">LISTADO DE ARCHIVO POR NOMBRE</div>
+			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
+				<!--TIPOS DE DOCUMENTOS-->	
+<head><br>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="<?= base_url();?>templates/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url();?>templates/css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url();?>templates/css/demo.css">
+	<style type="text/css" class="init">
+	</style>
+	<script type="text/javascript" language="javascript" src="<?= base_url();?>templates/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="<?= base_url();?>templates/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="<?= base_url();?>templates/js/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="<?= base_url();?>templates/js/demo.js"></script>
+	<script type="text/javascript" language="javascript" class="init">
+		$(document).ready(function() {
+			$('#example').DataTable();
+		} );
+	</script>
+</head>
+<body>
+<table id="example" class="display" cellspacing="5" width="100%" style="border-radius:4px 4px 4px 4px;-moz-border-radius:4px 4px 4px 4px;-webkit-border-radius:4px 4px 4px 4px;border:1px #444444 solid;font-family:Verdana, Geneva, sans-serif;">
+	<thead style="font-size:11px;color:#FFF;background-color:#444444;heigth=40px;">
+		<tr>
+			<th>NRO.</th>
+            <th>NRO. DOCUMENTO CI</th>
+			<th>NOMBRE COMPLETO</th>
+		</tr>
+	</thead>
+	<tfoot style="font-size:11px;color:#FFF;background-color:#444444;heigth=40px;">
+		<tr>
+			<th>NRO.</th>
+            <th>NRO. DOCUMENTO CI</th>
+			<th>NOMBRE COMPLETO</th>
+		</tr>
+	</tfoot>
+	<tbody style="font-size:11px;">
+    	<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>55585</td>
+			<td>rrhrtty</td>
+		</tr>
+	</tbody>
+</table>
+<center>
+<table>
+	<tr style="height: 230px;">
+		<td>
+			<input type="submit" class="botones ico-btnsave" value="SOLICITUD DE ARCHIVO">
+        </td>
+	</tr>
+</table>
+    </td>
+    </tr>
+</table>
+</center>
+</div>
+	<div style="clear: both;"></div>	
+</body>
+</form>
 		</div><!-- cB -->
 		<div class="Cpad">
 			<br class="clear" />

@@ -21,6 +21,10 @@
 .txtcampo.large{
   width: 450px;
 }
+.txtcampo.large2{
+  width: 450px;
+  height: 100px;
+}
 .txtcampo.short{
   width: 70px;
 }
@@ -102,6 +106,9 @@
   border: 1px solid #EB990A;
 }
 .mensajevalidacion{
-  color: red;
-  font-size: 9px
+  
+  --webkit-color: #036;
+  --ms-color: #036;
+  --moz-color: #036;
+  font-size: 9px;
 }

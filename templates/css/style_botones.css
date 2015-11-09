@@ -14,7 +14,7 @@
   text-align: center;   
 }
 .botones:hover{
-  border:solid 1px #02162D;  
+  border:solid 1px #FFF;  
   color:#E5FFFF; 
   background-color:#02162D; 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45bfe8', endColorstr='#45bfe8',GradientType=0); 
@@ -41,6 +41,12 @@
 }
 .ico-btnlimpiar{
   background-image: url(../img/iconos/cup.png);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+}
+.ico-btnsearch{
+  background-image: url(../img/iconos/search.png);
   background-size: 12px;
   background-repeat: no-repeat;
   background-position: 5px 5px;

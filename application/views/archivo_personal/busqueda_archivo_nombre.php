@@ -12,7 +12,7 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<!-- validaciones -->
+		<!-- validaciones -->
         <script type="text/javascript" src="<?= base_url('templates/js/jquery_1.4.js');?>"/></script>
         <script type="text/javascript" src="<?= base_url('templates/js/jquery_validate.js');?>"/></script>
         <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>
@@ -22,23 +22,21 @@
 			$(
 			   function()
 			   {
-					$('#frmlogin').validate
+					$('#frmbusquedanombre').validate
 					(
 					 	{
 							rules:
 							{
-							'nom_usu': {required: true},
-							'pas_usu': {required: true}
+							'nom_arc': {required: true}
 							},
 							messages: 
 							{
-							'nom_usu':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
-							'pas_usu':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'nom_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
 							},
 							debug: true,
 							submitHandler: function(form)
 							{
-								document.getElementById("frmlogin").submit();
+								document.getElementById("frmbusquedanombre").submit();
 							}
 					 	}
 					);
@@ -131,42 +129,40 @@
 		</div><!-- cA -->
 
 		<div id="cB">
-			<div class="titulo">INICIAR SESIÓN </div>
-			<form name="frmlogin" id="frmlogin" action="<?=base_url();?>personal/insertar" method="post">
+			<div class="titulo">CONSULTA DE ARCHIVO POR NOMBRE </div>
+			<form name="frmbusquedanombre" id="frmbusquedanombre" action="<?=base_url();?>personal/insertar" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
-				<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
-					<table>
-					<tr>
-						<td>
-						<table style="padding-top: 140px;">
-					    <tr>
-                            <td><img src="<?= base_url('templates/img/images/team.png');?>" title="Login"></td>
-                        </tr>
-                    </table>
-                    </td>
-                    <td>
-                    <table style="padding-top:140px;">
-						<tr style="height: 50px;">
-							<td width="100px" class="lblnombre">Nombre</td>
-							<td width="100px"><input type="text" name="nom_usu" class="txtcampo" placeholder="NOMBRE DE USUARIO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
-						</tr>
-						<tr>
-							<td width="100px" class="lblnombre">Password</td>
-							<td width="100px"><input type="password" name="pas_usu" class="txtcampo"  placeholder="PASSWORD" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
-				    	</tr>   
-						<tr style="height: 80px; padding-left:50px;" align="center">
-							<td><input type="submit" class="botones ico-btnsave" value="INGRESAR"></td>
-                 			<td><input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS"></td>
-						</tr>
-				        </td>
-				        </tr>
-				    </table>
-						</tr>
-					</table>
-					</td>
-					</tr>
-					</table>
-				</fieldset>
+				<center>
+            <div class="colordiv">
+                <center>
+	        <table>
+	        <tr>
+	            <td rowspan="5">
+	            <img src="<?= base_url('templates/img/images/busquedafolder.png');?>">
+	            </td>
+	        </tr>
+	        <tr>
+	        <td></td>
+	        <td></td>
+	        </tr>
+	        <tr>
+	        <tr style="height: 50px;">
+			   <td width="100px" class="lblnombre">Ingrese nombre:</td>
+			   <td width="100px"><input type="text" name="nom_arc" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
+		    </tr>  
+	        </tr>
+	        <tr>
+	           <td height="40px" colspan="2" style="padding-left:25px" align="center">
+				<input type="submit" class="botones ico-btnsearch" value="BUSCAR">
+                <input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
+               </td>
+           </tr>
+	<tr><td></td><td></td></tr>
+	</table>
+</form>
+</center>
+</div>
+</center>
 			</form>
 		</div><!-- cB -->
 		<div class="Cpad">
