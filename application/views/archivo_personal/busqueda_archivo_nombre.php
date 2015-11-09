@@ -12,6 +12,37 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<!-- validaciones -->
+        <script type="text/javascript" src="<?= base_url('templates/js/jquery_1.4.js');?>"/></script>
+        <script type="text/javascript" src="<?= base_url('templates/js/jquery_validate.js');?>"/></script>
+        <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>
+        		
+		<!--Validacion de campos-->
+		<script type="text/javascript">
+			$(
+			   function()
+			   {
+					$('#frmbusquedanombre').validate
+					(
+					 	{
+							rules:
+							{
+							'nom_arc': {required: true}
+							},
+							messages: 
+							{
+							'nom_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							},
+							debug: true,
+							submitHandler: function(form)
+							{
+								document.getElementById("frmbusquedanombre").submit();
+							}
+					 	}
+					);
+				}
+			);
+		</script>
 	</head>
 <body>
 <div id="daddy">
@@ -99,7 +130,7 @@
 
 		<div id="cB">
 			<div class="titulo">CONSULTA DE ARCHIVO POR NOMBRE </div>
-			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmbusquedanombre" id="frmbusquedanombre" action="<?=base_url();?>personal/insertar" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
 				<center>
             <div class="colordiv">
@@ -117,7 +148,7 @@
 	        <tr>
 	        <tr style="height: 50px;">
 			   <td width="100px" class="lblnombre">Ingrese nombre:</td>
-			   <td width="100px"><input type="text" name="archivo" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" ></td>	
+			   <td width="100px"><input type="text" name="nom_arc" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
 		    </tr>  
 	        </tr>
 	        <tr>

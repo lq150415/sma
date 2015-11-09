@@ -12,6 +12,68 @@
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_form.css');?>"/>
 		<link rel="stylesheet" media="screen" href="<?= base_url('templates/css/style_botones.css');?>"/>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+	    <!-- validaciones -->
+		<script type="text/javascript" src="<?= base_url('templates/js/jquery_1.4.js');?>"/></script>
+        <script type="text/javascript" src="<?= base_url('templates/js/jquery_validate.js');?>"/></script>
+        <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>		
+		<!--Validacion de campos-->
+		<script type="text/javascript">
+			$(
+			   function()
+			   {
+					$('#frmautorizacion').validate
+					(
+					 	{
+							rules:
+							{
+							'nro_per': {required: true},
+							'raz_arc': {required: true},
+							'nom_arc': {required: true},
+							'fec_arc': {required: true},
+							'mot_arc': {required: true}
+							},
+							messages: 
+							{
+							'nro_per':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'raz_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'nom_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'fec_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							'mot_arc':{required:'<label class="mensajevalidacion">Campo requerido</label>'},
+							},
+							debug: true,
+							submitHandler: function(form)
+							{
+								document.getElementById("frmautorizacion").submit();
+							}
+					 	}
+					);
+				}
+			);
+		</script>
+				<!--Datepicker-->
+		<script type="text/javascript">
+			$(function() {
+			$('.datepicker').datepicker
+				({
+				monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+				monthNamesShort: [ "Ene", "Feb", "Mar", "Abr", "Mar", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ],
+				dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+				
+				dateFormat:'yy/mm/dd',
+				beforeShowDay: $ .datepicker.noWeekends,
+				changeMonth: true,
+				changeYear: true,
+				firstDay: 1,
+				yearRange: "1900:2025",
+				beforeShow :  function (){     
+		        $ ( ".ui-datepicker" ). css ( 'font-size' ,  12 )  
+		    	} 
+
+			});
+
+			});
+		</script>
 	</head>
 <body>
 <div id="daddy">
@@ -57,7 +119,6 @@
 			<div id="slogan">UNIDAD EJECUTORA DE TITULACION</div>
 		</div>
 	</div>
-	
 	<div id="content">
 		<div id="cA">
 			<nav class="vnav2">
@@ -99,9 +160,51 @@
 
 		<div id="cB">
 			<div class="titulo">FORMULARIO DE AUTORIZACIÓN </div>
-			<form name="frmpersonal" id="frmpersonal" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmautorizacion" id="frmautorizacion" action="<?=base_url();?>personal/insertar" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
-				
+			<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
+			<legend> DATOS AUTORIZACIÓN</legend>
+					<table >
+						<tr style="height: 60px;">
+							<td width="100px" class="lblnombre">Nro. de personal</td>
+							<td width="240px" ><input type="text" name="nro_per" class="txtcampo" placeholder="NRO DE PERSONAL" onkeypress="return solonumeros(event);" onpaste="return false"></td>
+							<td width="100px" class="lblnombre">Razón</td>
+							<td width="240px">
+								<select name="raz_arc" class="txtselect">
+									<option value="">SELECCIONE</option>
+									<option value="Carpetilla">Carpetilla</option>
+									<option value="Carpeta de palanca">Carpeta de palanca</option>
+									<option value="Otros">Otros</option>
+								</select>
+							</td>
+						</tr>
+						<tr style="height: 40px;">
+							<td width="100px" class="lblnombre">Nombre de archivo</td>
+							<td width="240px"><input type="text" name="nom_arc" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
+						    <td width="130px" class="lblnombre">Fecha de autorización </td>
+							<td width="220px"><input type="text" name="fec_aut" class="txtcampo datepicker" readonly="" placeholder="FECHA DE AUTORIZACIÓN " ></td>
+					    </tr> 
+					   <table>
+						<tr style="height: 60px;">
+							<td width="180px" class="lblnombre">Motivos de autorización </td>
+							<td width="320px"><textarea class="txtcampo large2" type="text" name="mot_arc" placeholder="MOTIVOS DE AUTORIZACIÓN" onkeypress="return alfanumerico(event);" onpaste="return false"></textarea> </td>
+						</tr>
+					   </table>
+					</table>
+					<center>
+					<table>
+						<tr style="height: 80px;">
+							<td>
+								<input type="submit" class="botones ico-btnsave" value="ENVIAR DATOS">
+                 				<input type="reset"  onclick="document.location.reload();" class="botones ico-btnlimpiar" value="LIMPIAR DATOS">
+                 			</td>
+						</tr>
+					</table>
+				</td>
+				</tr>
+				</table>
+				</center>	
+				</fieldset>	
 			</form>
 		</div><!-- cB -->
 		<div class="Cpad">
