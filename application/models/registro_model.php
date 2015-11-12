@@ -1,8 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No tiene acceso a este modulo');
-
+$id_car=0;
 Class Registro_model extends CI_Model
 {
-    var $id_car=0;
       function __construct()
     {
         parent::__construct();
@@ -38,25 +37,16 @@ Class Registro_model extends CI_Model
         if($this->db->insert('carpeta',$carpeta))
         {
             $id_car = $this->db->insert_id();
-            echo $id_car;
-            return $id_car;
-            return true;
+
+           return true;
         }
         else
         {
           
-            return false;
+           return false;
         }
     }
-      public function retornar_id()
-    {
-        global $id_car;
-        $x=$id_car;
-        
-        echo $x;
 
-               
-    }
     /*INSERTA FECHAS EXTREMAS*/
     public function inserta_fechasextremas($fechas_extremas)
     {
@@ -69,8 +59,124 @@ Class Registro_model extends CI_Model
             return false;
         }
     }
+    /*INSERTA RESOLUCION*/
+    public function inserta_documento($resolucion, $memorandum, $informe_tecnico, $minuta, $testimonio, $certificado_np)
+    {
+        $tipo=$_POST['tip_doc'];
+        if($tipo == 'Resolucion')
+        {
+            if($this->db->insert('resolucion',$resolucion))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if($tipo == 'Memorandum')
+            {
+                if($this->db->insert('memorandum',$memorandum))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                 if($tipo == 'Informe Tecnico')
+                 {
+                    if($this->db->insert('informe_tecnico',$informe_tecnico))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                 }
+                 else
+                 {
+                   if($tipo == 'Minuta')
+                   {
+                        if($this->db->insert('minuta',$minuta))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                   }
+                    else
+                   {
+                        if($tipo == 'Testimonio')
+                        {
+                            if($this->db->insert('testimonio',$testimonio))
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            if($tipo == 'Certificado de no propiedad')
+                            {
+                                if($this->db->insert('certificado_np',$certificado_np))
+                                {
+                                    return true;
+                                }
+                                else
+                                {
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
 
-  
+                   }
+                 }
+
+            }
+        }
+    }
+/*INSERTA UBICACION*/
+    public function inserta_ubicacion($ubicacion)
+    {
+        if($this->db->insert('ubicacion_topografica',$ubicacion))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /*INSERTA AREA*/
+    public function inserta_productor($area)
+    {
+        if($this->db->insert('area',$area))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 }
 ?>

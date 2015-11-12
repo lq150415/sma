@@ -284,13 +284,13 @@
 								<td width="200px">
 									<select name="tip_doc" class="txtselect">
 										<option value="">SELECCIONE</option>
-										<option value="LP">Resolucion</option>
-										<option value="OR">Memorandum</option>
-										<option value="CBBA">Informe Tecnico</option>
-										<option value="PT">Minuta</option>				
-										<option value="TJ">Testimonio</option>
-										<option value="BN">Certificado de no propiedad</option>
-										<option value="CH">Documento de identificacion</option>
+										<option value="Resolucion">Resolucion</option>
+										<option value="Memorandum">Memorandum</option>
+										<option value="Informe Tecnico">Informe Tecnico</option>
+										<option value="Minuta">Minuta</option>				
+										<option value="Testimonio">Testimonio</option>
+										<option value="Certificado de no propiedad">Certificado de no propiedad</option>
+										<option value="Documento de identificacion">Documento de identificacion</option>
 									</select>
 								<td width="80px" class="lblnombre">Fecha Doc.</td>
 								<td width="70px"><input type="text" name="fec_doc" class="txtcampo datepicker" readonly="" placeholder="FECHA" ></td>
@@ -316,7 +316,7 @@
 						</tr>
 						<tr style="height: 30px;">
 							<td width="100px" class="lblnombre">Cuerpo</td>
-							<td width="240px"><input type="text" name="crp_ubi" class="txtcampo" placeholder="CUERPO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
+							<td width="240px"><input type="text" name="cue_ubi" class="txtcampo" placeholder="CUERPO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 							<td width="100px" class="lblnombre">Balda</td>
 							<td width="240px"><input type="text" name="bal_ubi" class="txtcampo" placeholder="BALDA" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
 						</tr>

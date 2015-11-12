@@ -66,15 +66,67 @@ class Registro extends CI_Controller
 		);
 		return $fechas_extremas;
 	}
-
-	public function documento()
+    public function ubicacion()
+    {
+    	$ubicacion=array(
+    	'AMB_UBI' => $this->input->post('amb_ubi'),
+    	'EST_UBI' => $this->input->post('est_ubi'),
+    	'CUE_UBI' => $this->input->post('cue_ubi'),
+    	'BAL_UBI' => $this->input->post('bal_ubi'),
+    	);
+    	return $ubicacion;
+    }
+	public function certificado_np()
 	{
-		$documento=array(
-			'TIP_DOC' => $this->input->post('tip_doc'),
-			'FEC_DOC' => (date('Y').'-'.date('m').'-'.date('d')),
-			'DES_DOC' => $this->input->post('des_doc'),
+		$certificado_np=array(
+			'DES_CER' => $this->input->post('des_doc'),
+			'FEC_CER' => $this->input->post('fec_doc'),
 		);
-		return $documento;
+		return $certificado_np;
+	}
+
+		public function memorandum()
+	{
+		$memorandum=array(
+			'DES_MEM' => $this->input->post('des_doc'),
+			'FEC_MEM' => $this->input->post('fec_doc'),
+		);
+		return $memorandum;
+	}
+
+		public function resolucion()
+	{
+		$resolucion=array(
+			'FEC_RES' => $this->input->post('fec_doc'),
+			'DES_RES' => $this->input->post('des_doc'),
+		);
+		return $resolucion;
+	}
+
+	public function minuta()
+	{
+		$minuta=array(
+			'FEC_MIN' => $this->input->post('fec_doc'),
+			'TIP_MIN' => $this->input->post('des_doc'),			
+		);
+		return $minuta;
+	}
+
+		public function testimonio()
+	{
+		$testimonio=array(
+			'DES_TES' => $this->input->post('des_doc'),
+			'FEC_TES' => $this->input->post('fec_doc'),
+		);
+		return $testimonio;
+	}
+		public function informe_tecnico()
+	{
+		$informe_tecnico=array(
+			'DES_INF' => $this->input->post('des_doc'),
+			'FEC_INF' => $this->input->post('fec_doc'),
+		);
+		return $informe_tecnico;
 	}
 	
 	public function area()
@@ -88,23 +140,47 @@ class Registro extends CI_Controller
 /*FUNCION INSERTA*/
 	   public function insertar()
     {  
+    	
     	/*Declaracion de arrays*/
          $archivo = array();
-         $id_car = $this->registro_model->retornar_id();
          $archivo = $this->archivo();
-         $archivo = array('id_car' => $id_car);
-
-
+      
          $datos_tecnicos = array();
          $datos_tecnicos = $this->datos_tecnicos();
 
-         $carpeta=array();
+         $carpeta = array();
          $carpeta = $this->carpeta();
 
          $fechas_extremas=array();
          $fechas_extremas = $this->fechas_extremas();
 
+         $resolucion = array();
+         $resolucion = $this->resolucion();
+
+         $memorandum = array();
+         $memorandum = $this->memorandum();
+
+         $informe_tecnico = array();
+         $informe_tecnico = $this->informe_tecnico();
+
+         $minuta = array();
+         $minuta = $this->minuta();
+
+         $testimonio=array();
+         $testimonio=$this->testimonio();
+
+         $certificado_np = array();
+         $certificado_np = $this->certificado_np();
+
+         $ubicacion = array();
+         $ubicacion=$this->ubicacion();
+
+         $area = array();
+         $area = $this->area();
+
          /*Insert*/
+         if($this->registro_model->inserta_ubicacion($ubicacion))
+         {
           if($this->registro_model->inserta_archivo($archivo))
           {
 
@@ -114,11 +190,20 @@ class Registro extends CI_Controller
 		  	   {
 		  	      if($this->registro_model->inserta_fechasextremas($fechas_extremas))
 		  	      {
-		  	   	  return true;
+		  	      	 if($this->registro_model->inserta_productor($area))
+		  	      	 {
+		  	      	 	if($this->registro_model->inserta_documento($resolucion, $memorandum, $informe_tecnico, $minuta, $testimonio,$certificado_np))
+		  	      	 	{
+		  	      	 		
+		  	      	 		return true;
+		  	      	 		
+		  	      	 	}
+					 }					 		  	   	  
 		  	   	  }
 		  	   }
 		  	}
           }
+      }
           else
           {return false;}
     }
