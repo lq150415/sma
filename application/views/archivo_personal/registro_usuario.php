@@ -224,10 +224,6 @@
 					<legend>DATOS DE CUENTA</legend>
 					<table>
 						<tr style="height:30px;">
-							<td width="150px" class="lblnombre">NOMBRE DE USUARIO</td>
-							<td width="480px"><input type="text" name="nom_usu" class="txtcampo large" placeholder="NOMBRE DE USUARIO" onkeypress="return sololetras(event);" onpaste="return false"></td>
-						</tr>
-						<tr style="height:30px;">
 							<td width="150px" class="lblnombre">PASSWORD</td>
 							<td width="480px"><input type="password" name="pas_usu" class="txtcampo large" placeholder="NOMBRE DE USUARIO" onkeypress="return sololetras(event);" onpaste="return false"></td>
 						</tr>
