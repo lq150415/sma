@@ -118,19 +118,18 @@
 			<span id="logo-text"><a href=""></a></span>
 		</div>
 		<!-- menu -->
-		<div id="menu">
+		<div id="menu"> 
 			<ul>
 				<li><a href="" id="active">Principal</a></li>
-				<li><a href="">C.S.I.</a></li>
-				<li><a href="">C.P.I.</a></li>
-				<li><a href="">Solicitudes</a></li>
+				<li><a href="">Registrar Archivos</a></li>
+				<li><a href="">Registrar usuarios</a></li>
 				<li><a href="">Notificaciones</a></li>
-				<li><a href="">Devoluciones</a></li>
+				<li><a href="">Consultas</a></li>
 			</ul>
 		</div>
 		<!-- ticker -->
 		<div id="ticker">
-			<b>Unidad Ejecutora de Titulación</b> del Ministerio de Obras Públicas, Servicios y Vivienda.
+			<b>Universidad Privada </b>Franz Tamayo
 		</div>
 		<div class="clear"></div>
 		<!-- headerimage -->
@@ -141,7 +140,7 @@
 					<div id="user-icon">
 						<img src="<?= base_url('templates/img/images/user-men.png');?>">
 					</div>
-					<span id="download-text"><a href="">eajahuanca.uet<br/>Edwin Ajahuanca Callisaya</a></span>
+					<span id="download-text"><a href="">Ingenieria de Sistemas<br/>Taller de Base de Datos</a></span>
 				</center>
 			</div>
 			<!-- icons -->
@@ -150,7 +149,7 @@
 				<a href=""><img src="<?= base_url('templates/img/images/icon_sitemap.gif');?>" title="Configuraciones" width="13" height="13" id="sitemap" /></a>
 				<a href=""><img src="<?= base_url('templates/img/images/icon_contact.gif');?>" title="Correo Electrónico" width="13" height="13" id="contact" /></a>			
 			</div>
-			<div id="slogan">UNIDAD EJECUTORA DE TITULACION</div>
+			<div id="slogan">UNIVERSIDAD PRIVADA FRANZ TAMAYO</div>
 		</div>
 	</div>
 	
@@ -165,7 +164,7 @@
 	                    </ul>
 	                </li>
 	                <li class="active2">
-	                    <a href="" class="vnav-item2">DOCUMENTO C.S.I<span class="vnav-counter2">2</span></a>
+	                    <a href="" class="vnav-item2">CARPETAS<span class="vnav-counter2">2</span></a>
 	                    <ul class="vnav-subnav2">
 	                    	<li><a href="index.html">LISTAR ARCHIVOS</a></li>
 	                        <li><a href="index.html">REGISTRAR NUEVO ARCHIVO</a></li>
@@ -194,7 +193,7 @@
 		</div><!-- cA -->
 
 		<div id="cB">
-			<div class="titulo">REGISTRAR DATOS DE CARPETA SOCIAL INDIVIDUAL - CSI</div>
+			<div class="titulo">REGISTRAR DATOS DE CARPETAS</div>
 			<form name="frmarchivo" id="frmarchivo" action="<?=base_url();?>personal/insertar" method="post">
 				<fieldset class="fieldcuerpo" align="left">
 					<legend> DATOS GENERALES </legend>
@@ -262,11 +261,9 @@
 						<tr style="height: 30px;">
 							<td width="130px" class="lblnombre">Nombre de carpeta</td>
 							<td width="220px"><input type="text" name="nom_car" class="txtcampo" placeholder="ADJUDICATARIO/BENEFICIARIO" onkeypress="return sololetras(event);" onpaste="return false" ></td>
-							<form method="post">
+							<form method="get" name="guarda">
 							<td width="80px" class="lblnombre">Cantidad de Doc.</td>
-							<td width="70px"><input type="text" name="cant_fol" class="txtcampo short" placeholder="CANTIDAD DE DOCUMENTOS" onkeypress="return solonumeros(event);" onpaste="return false"></td>
-							<td><input type="button" value="csa" ></td>
-							<td> <? echo $_POST['cant_fol']?> </td>
+							<td width="70px"><input type="text" name="cant_fol" class="txtcampo " placeholder="CANTIDAD DE DOCUMENTOS" onkeypress="return solonumeros(event);" onpaste="return false"></td>
 							</form>
 						</tr>
 						<tr style="height: 30px;">
@@ -277,10 +274,9 @@
 							</tr>
 					</table>
 					<!--TIPOS DE DOCUMENTOS-->
-
 					<fieldset class="fieldcuerpo">
-						<legend>Documento 1</legend>
-						<table>
+						<legend>Documento </legend>
+						<table> 
 							<tr>
 								<td rowspan="2" width="100px"></td>
 								<td width="100px" class="lblnombre">Tipo de Doc.</td>
@@ -306,8 +302,8 @@
 							</tr>
 						</table>
 					</fieldset>
-				</fieldset>
 
+				</fieldset>
 				<fieldset class="fieldcuerpo" align="left" >
 					<legend> UBICACION FISICA </legend>
 					<table >
@@ -363,11 +359,11 @@
 </div><!-- daddy -->
 <div id="footer">
 	<div id="foot">
-		<div id="foot1"><a href="">&copy; Copyright 2015</a> - Sistemas UET</div><!-- foot1 -->
+		<div id="foot1"><a href="">&copy; Copyright 2015</a> - Sistemas Octavo</div><!-- foot1 -->
 		<div id="foot2">
-			<span class="valid"><a href="">LA PAZ</a> - <a href="">BOLIVIA</a></span><center>Av. Mariscal Santa Cruz Edif. Mutual la Primera <a href=""> Bloque B Piso 19 y 20<span class="star">*</span></a><br>Telf. 2 - <a href="">2141534</a> Fax. 2-<a href="">2141565</a></center>
+			<span class="valid"><a href="">LA PAZ</a> - <a href="">BOLIVIA</a></span><center> Ingenieria de Sistemas<a href=""> Unifranz<span class="star">*</span></a></center>
 		</div><!-- foot1 -->
 	</div><!-- foot -->
 </div><!-- footer -->
 </body>
-</html>
+</html> 

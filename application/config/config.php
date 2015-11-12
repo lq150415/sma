@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/saca/';
+$config['base_url'] = 'http://localhost/sma/';
 
 /*
 |--------------------------------------------------------------------------

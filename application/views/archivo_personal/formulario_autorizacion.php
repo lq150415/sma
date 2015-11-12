@@ -84,19 +84,18 @@
 			<span id="logo-text"><a href=""></a></span>
 		</div>
 		<!-- menu -->
-		<div id="menu">
+		<div id="menu"> 
 			<ul>
 				<li><a href="" id="active">Principal</a></li>
-				<li><a href="">C.S.I.</a></li>
-				<li><a href="">C.P.I.</a></li>
-				<li><a href="">Solicitudes</a></li>
+				<li><a href="">Registrar Archivos</a></li>
+				<li><a href="">Registrar usuarios</a></li>
 				<li><a href="">Notificaciones</a></li>
-				<li><a href="">Devoluciones</a></li>
+				<li><a href="">Consultas</a></li>
 			</ul>
 		</div>
 		<!-- ticker -->
 		<div id="ticker">
-			<b>Unidad Ejecutora de Titulación</b> del Ministerio de Obras Públicas, Servicios y Vivienda.
+			<b>Universidad Privada </b>Franz Tamayo
 		</div>
 		<div class="clear"></div>
 		<!-- headerimage -->
@@ -107,7 +106,7 @@
 					<div id="user-icon">
 						<img src="<?= base_url('templates/img/images/user-men.png');?>">
 					</div>
-					<span id="download-text"><a href="">eajahuanca.uet<br/>Edwin Ajahuanca Callisaya</a></span>
+					<span id="download-text"><a href="">Ingenieria de Sistemas<br/>Taller de Base de Datos</a></span>
 				</center>
 			</div>
 			<!-- icons -->
@@ -116,9 +115,10 @@
 				<a href=""><img src="<?= base_url('templates/img/images/icon_sitemap.gif');?>" title="Configuraciones" width="13" height="13" id="sitemap" /></a>
 				<a href=""><img src="<?= base_url('templates/img/images/icon_contact.gif');?>" title="Correo Electrónico" width="13" height="13" id="contact" /></a>			
 			</div>
-			<div id="slogan">UNIDAD EJECUTORA DE TITULACION</div>
+			<div id="slogan">UNIVERSIDAD PRIVADA FRANZ TAMAYO</div>
 		</div>
 	</div>
+	
 	<div id="content">
 		<div id="cA">
 			<nav class="vnav2">
@@ -130,7 +130,7 @@
 	                    </ul>
 	                </li>
 	                <li class="active2">
-	                    <a href="" class="vnav-item2">DOCUMENTO C.S.I<span class="vnav-counter2">2</span></a>
+	                    <a href="" class="vnav-item2">CARPETAS<span class="vnav-counter2">2</span></a>
 	                    <ul class="vnav-subnav2">
 	                    	<li><a href="index.html">LISTAR ARCHIVOS</a></li>
 	                        <li><a href="index.html">REGISTRAR NUEVO ARCHIVO</a></li>

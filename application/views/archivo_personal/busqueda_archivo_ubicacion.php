@@ -130,33 +130,40 @@
 		</div><!-- cA -->
 
 		<div id="cB">
-			<div class="titulo">INICIAR SESIÓN </div>
-			<form name="frmlogin" id="frmlogin" action="<?=base_url();?>personal/insertar" method="post">
+			<div class="titulo">BUSQUEDA DE ARCHIVO POR UBICACIÓN TOPOGRÁFICA </div>
+			<form name="frmubicacion" id="frmubicacion" action="<?=base_url();?>personal/insertar" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
 				<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
 					<table>
 					<tr>
 						<td>
-						<table style="padding-top: 140px;">
+						<table style="padding-top: 10px; padding-left:30px;">
 					    <tr>
-                            <td><img src="<?= base_url('templates/img/images/team.png');?>" title="Login"></td>
+                            <td><img height="150" width="190"src="<?= base_url('templates/img/images/busqueda-archivo.jpg');?>" title="Busqueda"></td>
                         </tr>
                     </table>
                     </td>
                     <td>
-                    <table style="padding-top:140px;">
+                    <table style="padding-top:50px;">
 						<tr style="height: 50px;">
-							<td width="100px" class="lblnombre">Nombre</td>
-							<td width="100px"><input type="text" name="nom_usu" class="txtcampo" placeholder="NOMBRE DE USUARIO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
+							<td width="80px" class="lblnombre">Ambiente</td>
+							<td width=""><input type="text" name="amb_arc" class="txtcampo short" placeholder="AMBIENTE" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
+							<td width="80px" class="lblnombre">Estante</td>
+							<td width="100px"><input type="text" name="est_arc" class="txtcampo short" placeholder="ESTANTE" ></td>	
 						</tr>
 						<tr>
-							<td width="100px" class="lblnombre">Password</td>
-							<td width="100px"><input type="password" name="pas_usu" class="txtcampo"  placeholder="PASSWORD" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
-				    	</tr>   
-						<tr style="height: 80px; padding-left:50px;" align="center">
+							<td width="80px" class="lblnombre">Cuerpo</td>
+							<td width="100px"><input type="password" name="cue_arc" class="txtcampo short"  placeholder="CUERPO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
+							<td width="80px" class="lblnombre">Balda</td>
+							<td width="100px"><input type="password" name="bal_arc" class="txtcampo short"  placeholder="CUERPO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>
+				    	</tr> 
+				    	<table style="padding-left:85px;">
+				    		<tr style="height: 80px;">
 							<td><input type="submit" class="botones ico-btnsave" value="INGRESAR"></td>
                  			<td><input type="reset" class="botones ico-btnlimpiar" value="LIMPIAR DATOS"></td>
 						</tr>
+				    	</table>  
+						
 				        </td>
 				        </tr>
 				    </table>
@@ -175,6 +182,7 @@
 	</div><!-- content -->
 	<div id="properspace"></div><!-- properspace -->
 </div><!-- daddy -->
+
 <div id="footer">
 	<div id="foot">
 		<div id="foot1"><a href="">&copy; Copyright 2015</a> - Sistemas UET</div><!-- foot1 -->
