@@ -33,6 +33,7 @@
 					 	{
 							rules:
 							{
+								/*
 							'ncj_arc': {required: true},
 							'cub_arc': 'required',
 							'npr_dte': {required: true},
@@ -50,7 +51,7 @@
 							'crp_ubi': 'required',
 							'bal_ubi': {required: true},
 							'pro_area': {required: true},
-							'obs_area': {required: true}
+							'obs_area': {required: true}*/
 
 							},
 							messages: 
@@ -194,7 +195,7 @@
 
 		<div id="cB">
 			<div class="titulo">REGISTRAR DATOS DE CARPETAS</div>
-			<form name="frmarchivo" id="frmarchivo" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmarchivo" id="frmarchivo" action="<?=base_url();?>registro/insertar" method="post">
 				<fieldset class="fieldcuerpo" align="left">
 					<legend> DATOS GENERALES </legend>
 					<table >
