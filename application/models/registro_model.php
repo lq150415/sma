@@ -2,7 +2,6 @@
 
 Class Registro_model extends CI_Model
 {
-    var $id_car=0;
       function __construct()
     {
         parent::__construct();

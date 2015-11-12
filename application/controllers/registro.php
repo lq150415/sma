@@ -15,7 +15,10 @@ class Registro extends CI_Controller
 	{
 		$this->load->view('archivo_personal/registro_archivo');
 	}
-
+	public function usuario()
+	{
+		$this->load->view('archivo_personal/registro_usuario');	
+	}
 	public function archivo()
 	{
 		$archivo = array(
