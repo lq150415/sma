@@ -18,6 +18,7 @@
         <script type="text/javascript" src="<?= base_url('templates/js/validaciones.js');?>"/></script>		
 	</head>
 <body>
+
 <div id="daddy">
 	<!-- header -->
 	<div id="header">
@@ -28,11 +29,11 @@
 		<!-- menu -->
 		<div id="menu"> 
 			<ul>
-				<li><a href="" id="active">Principal</a></li>
-				<li><a href="">Registrar Archivos</a></li>
-				<li><a href="">Registrar usuarios</a></li>
+				<li><a href="<?= base_url('login/principal');?>" id="active">Principal</a></li>
+				<li><a href="<?= base_url('registro');?>">Registrar Archivos</a></li>
+				<li><a href="<?= base_url('registro/usuario');?>">Registrar usuarios</a></li>
 				<li><a href="">Notificaciones</a></li>
-				<li><a href="">Consultas</a></li>
+				<li><a href="<?= base_url('busquedaarchivo');?>">Consultas</a></li>
 			</ul>
 		</div>
 		<!-- ticker -->
@@ -68,24 +69,24 @@
 	                <li class="active2">
 	                    <a href="" class="vnav-item2">INICIO<span class="vnav-counter2">1</span></a>
 	                    <ul class="vnav-subnav2">
-	                        <li><a href="">VOLVER A MENU PRINCIPAL</a></li>
+	                        <li><a href="<?= base_url('login/principal');?>">VOLVER A MENU PRINCIPAL</a></li>
 	                    </ul>
 	                </li>
 	                <li class="active2">
-	                    <a href="" class="vnav-item2">CARPETAS<span class="vnav-counter2">2</span></a>
+	                    <a href="<?= base_url('grilla');?>" class="vnav-item2">CARPETAS<span class="vnav-counter2">2</span></a>
 	                    <ul class="vnav-subnav2">
-	                    	<li><a href="index.html">LISTAR ARCHIVOS</a></li>
-	                        <li><a href="index.html">REGISTRAR NUEVO ARCHIVO</a></li>
-	                        <li><a href="index.html">MODIFICAR ARCHIVO</a></li>
+	                    	<li><a href="<?= base_url('grilla');?>">LISTAR ARCHIVOS</a></li>
+	                        <li><a href="<?= base_url('registro');?>">REGISTRAR NUEVO ARCHIVO</a></li>
+	                        <li><a href="<?= base_url('registro');?>">MODIFICAR ARCHIVO</a></li>
 	                    </ul>
 	                </li>
 	                <li class="active2">
 	                    <a href="" class="vnav-item2">CONSULTAS Y REPORTES<span class="vnav-counter2">5</span></a>
 	                    <ul class="vnav-subnav2">
-	                        <li><a href="index.html">POR NOMBRE DE CARPETA</a></li>
-	                        <li><a href="index.html">POR NOMBRE PROYECTO (URBANIZACION)</a></li>
-	                        <li><a href="index.html">POR NOMBRE DE PRODUCTOR</a></li>
-	                        <li><a href="index.html">POR UBICACION</a></li>
+	                        
+	                        <li><a href="<?= base_url('busquedaubicacion/proyecto');?>">POR NOMBRE PROYECTO (URBANIZACION)</a></li>
+	                        <li><a href="<?= base_url('busquedaarchivo');?>">POR NOMBRE DE PRODUCTOR</a></li>
+	                        <li><a href="<?= base_url('busquedaubicacion');?>">POR UBICACION</a></li>
 	                        <li><a href="index.html">POR DEPARTAMENTO</a></li>
 	                    </ul>
 	                </li>
