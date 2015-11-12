@@ -176,7 +176,18 @@ Class Registro_model extends CI_Model
             return false;
         }
     }
-
+/*REGISTRO USUARIO*/
+public function inserta_usuario($reg_usuario)
+{
+    if($this->db->insert('usuario',$reg_usuario))
+    {
+        return true;
+    }
+    else
+    {
+    return false;
+        }
+}
 
 }
 ?>

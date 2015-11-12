@@ -210,5 +210,36 @@ class Registro extends CI_Controller
           else
           {return false;}
     }
+
+
+    /*AREA USUARIO*/
+    public function reg_usuario()
+    {
+    	$reg_usuario=array(
+
+    		'CI_USU' => $this->input->post('ci_usu'),
+    		'NOM_USU' => $this->input->post('nom_usu'),
+    		'APA_USU' => $this->input->post('apa_usu'),
+    		'AMA_USU' => $this->input->post('ama_usu'),
+    		'PAS_USU' => $this->input->post('pas_usu'),
+    		'REG_USU' =>(date('Y').'-'.date('m').'-'.date('d')),
+    		);
+    	return $reg_usuario;
+
+    }
+
+    public function insertar_usuario()
+    {
+    	$reg_usuario=array();
+    	$reg_usuario=$this->reg_usuario();
+    	if($this->registro_model->inserta_usuario($reg_usuario))
+    	{
+    		return true;
+    	}
+    	else
+    	{
+    		return false;
+    	}
+    }
 	
 }

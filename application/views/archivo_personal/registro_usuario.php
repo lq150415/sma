@@ -197,7 +197,7 @@
 		<div id="cB">
 			
 			<div class="titulo">REGISTRO DE USUARIO </div>
-			<form name="frmusuario" id="frmusuario" action="<?=base_url();?>usuario/insertar" method="post">
+			<form name="frmusuario" id="frmusuario" action="<?=base_url();?>registro/insertar_usuario" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
 				<fieldset class="fieldcuerpo" align="left" >
 					<legend>DATOS DE USUARIO</legend>
