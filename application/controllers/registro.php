@@ -209,6 +209,7 @@ class Registro extends CI_Controller
       }
           else
           {return false;}
+       redirect('login/principal');
     }
 
 
@@ -241,5 +242,24 @@ class Registro extends CI_Controller
     		return false;
     	}
     }
+
+       public function busca_nombre()
+		{
+			$query = $this->input->post('nom_car');
+		    if($query)
+		    {
+		    	$result = $this->registro_model->busca_nombre($query);
+		        if ($result != FALSE)
+		        	{
+		        		$data = array('result' => $result);
+		        	}
+		        	else
+		        	{
+		        		$data = array('result' =>'' );
+		        	}
+		    }
+		 $this->load->view('archivo_personal/archivo_grilla',$data);
+		 
+	    }
 	
 }

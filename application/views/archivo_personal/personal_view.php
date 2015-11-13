@@ -95,10 +95,11 @@
 	            </ul>
 	        </nav> 
 		</div><!-- cA -->
-
+		<center>
 		<div id="cB">
 			<img src="<?= base_url('templates/img/principal.jpg');?>">			
-		</div><!-- cB -->
+		</div>
+		</center><!-- cB -->
 		<div class="Cpad">
 			<br class="clear" /></div>
 		</div><!-- Cpad -->

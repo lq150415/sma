@@ -189,5 +189,19 @@ public function inserta_usuario($reg_usuario)
         }
 }
 
+/*CONSULATAS*/
+   public function busca_nombre($variable)
+    {
+        $this->db->select();
+        $this->db->like('NOM_CAR',$variable);
+        $query= $this->db->get('carpeta');
+        if ($query->num_rows() > 0)
+            {return $query;}
+            else
+            {return false;}
+            
+    }
+
+
 }
 ?>

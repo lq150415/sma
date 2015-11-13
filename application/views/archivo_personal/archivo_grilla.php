@@ -122,139 +122,34 @@
 <table id="example" class="display" cellspacing="5" width="100%" style="border-radius:4px 4px 4px 4px;-moz-border-radius:4px 4px 4px 4px;-webkit-border-radius:4px 4px 4px 4px;border:1px #444444 solid;font-family:Verdana, Geneva, sans-serif;">
 	<thead style="font-size:11px;color:#FFF;background-color:#444444;heigth=40px;">
 		<tr>
-			<th>NRO.</th>
-            <th>NRO. DOCUMENTO CI</th>
-			<th>NOMBRE COMPLETO</th>
+			<th>CODIGO DE CARPETA</th>
+			<th>ADJUDICATARIO</th>
+            
 		</tr>
 	</thead>
 	<tfoot style="font-size:11px;color:#FFF;background-color:#444444;heigth=40px;">
 		<tr>
-			<th>NRO.</th>
-            <th>NRO. DOCUMENTO CI</th>
-			<th>NOMBRE COMPLETO</th>
+			<th>CODIGO DE CARPETA</th>
+			<th>ADJUDICATARIO</th>
+
+           
 		</tr>
 	</tfoot>
 	<tbody style="font-size:11px;">
-    	<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
-		<tr>
-			<td align="center">1</td>
-			<td>55585</td>
-			<td>rrhrtty</td>
-		</tr>
+    	<?php
+				if ($result)
+				{
+					foreach ($result->result() as $row) 
+					{
+						echo "<tr>";
+						echo "<td>".$row->ID_CAR."</td>";
+						echo "<td>".$row->NOM_CAR."</td>";
+						
+
+						echo "</tr>";
+					}
+				}
+			?>
 	</tbody>
 </table>
 <center>

@@ -10,4 +10,25 @@ class Busquedaarchivo extends CI_Controller
 	{
 		$this->load->view('archivo_personal/busqueda_archivo_nombre');
 	}
+	 /*CONSULTAS*/
+
+    public function busca_nombre()
+		{
+			/*$query = $this->input->post('nombre');
+		    if($query)
+		    {
+		    	$result = $this->personal_model->busca_nombre($query);
+		        if ($result != FALSE)
+		        	{
+		        		$data = array('result' => $result);
+		        	}
+		        	else
+		        	{
+		        		$data = array('result' =>'' );
+		        	}
+		    }*/
+		 //	$this->load->view('archivo_personal/archivo_grilla');
+		    echo "da";
+	    }
+	
 }

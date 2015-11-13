@@ -103,7 +103,7 @@
 
 		<div id="cB">
 			<div class="titulo">BUSQUEDA DE ARCHIVO POR PROYECTO </div>
-			<form name="frmdatos_tecnicos" id="frmdatos_tecnicos" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmdatos_tecnicos" id="frmdatos_tecnicos" action="<?=base_url();?>busquedaarchivo/busca_nombre" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
 				<fieldset class="fieldcuerpo" align="left" style="height: 555px;">
 					<table>

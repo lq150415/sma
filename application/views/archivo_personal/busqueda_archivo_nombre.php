@@ -130,7 +130,7 @@
 
 		<div id="cB">
 			<div class="titulo">CONSULTA DE ARCHIVO POR NOMBRE </div>
-			<form name="frmbusquedanombre" id="frmbusquedanombre" action="<?=base_url();?>personal/insertar" method="post">
+			<form name="frmbusquedanombre" id="frmbusquedanombre" action="<?=base_url();?>registro/busca_nombre" method="post">
 				<!--TIPOS DE DOCUMENTOS-->
 				<center>
             <div class="colordiv">
@@ -148,7 +148,7 @@
 	        <tr>
 	        <tr style="height: 50px;">
 			   <td width="100px" class="lblnombre">Ingrese nombre:</td>
-			   <td width="100px"><input type="text" name="nom_arc" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
+			   <td width="100px"><input type="text" name="nom_car" class="txtcampo" placeholder="NOMBRE DE ARCHIVO" onkeypress="return alfanumerico(event);" onpaste="return false"></td>	
 		    </tr>  
 	        </tr>
 	        <tr>
